@@ -94,20 +94,11 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor for Username" enabled="true">
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor for Credentials" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">Username</stringProp>
-            <stringProp name="RegexExtractor.regex">Enter &lt;em&gt;(.+?)&lt;/em&gt; for the username</stringProp>
+            <stringProp name="RegexExtractor.regex">Enter &lt;em&gt;(.+?)&lt;/em&gt; for the username and &lt;em&gt;(.+?)&lt;/em&gt; for the password</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default"></stringProp>
-            <stringProp name="RegexExtractor.match_number">1</stringProp>
-          </RegexExtractor>
-          <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor for Password" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">Password</stringProp>
-            <stringProp name="RegexExtractor.regex">nd &lt;em&gt;(.+?)&lt;/em&gt; for the password</stringProp>
-            <stringProp name="RegexExtractor.template">${1}</stringProp>
             <stringProp name="RegexExtractor.default"></stringProp>
             <stringProp name="RegexExtractor.match_number">1</stringProp>
           </RegexExtractor>
@@ -126,7 +117,7 @@
               <elementProp name="password" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.name">password</stringProp>
-                <stringProp name="Argument.value">SuperSecretPassword%21</stringProp>
+                <stringProp name="Argument.value">${Username_g2}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
               </elementProp>
