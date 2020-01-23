@@ -1,0 +1,1 @@
+DGB-C02VH08BH:bin singh2 rajiv$ sh jmeter -n -t /Users/singh2_rajiv/Automation/JMeter/JMeterTestPlans/CookieManager.jmx -l Test1.jtl
