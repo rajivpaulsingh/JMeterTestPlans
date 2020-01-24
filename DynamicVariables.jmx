@@ -13,8 +13,8 @@
             <stringProp name="Argument.value">aaa</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="Message" elementType="Argument">
-            <stringProp name="Argument.name">Message</stringProp>
+          <elementProp name="Result" elementType="Argument">
+            <stringProp name="Argument.name">Result</stringProp>
             <stringProp name="Argument.value">fail</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -94,8 +94,10 @@ log.info(prev.getResponseMessage());
 String message = prev.getResponseMessage();
 if(message == &quot;OK&quot;) 
 {
+	vars.put(&quot;Result&quot;, &quot;Pass&quot;);
 	log.info(&quot;pass&quot;);
 }
+log.info(vars.get(&quot;Result&quot;));
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
