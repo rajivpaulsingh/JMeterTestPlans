@@ -38,7 +38,11 @@ log.info(&quot;Result is: &quot; + sum);
 
 //Assigning values to variables
 vars.put(&quot;a&quot;, &quot;Hi&quot;);
-log.info(&quot;After assiging, the value is: &quot; + vars.get(&quot;a&quot;));</stringProp>
+log.info(&quot;After assiging, the value is: &quot; + vars.get(&quot;a&quot;));
+
+//JMeter context variables
+int threadNum = ctx.getThreadNum();
+log.info(&quot;Thread number is &quot; + threadNum);</stringProp>
           <stringProp name="BeanShellSampler.filename"></stringProp>
           <stringProp name="BeanShellSampler.parameters"></stringProp>
           <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
