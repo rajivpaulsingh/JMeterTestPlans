@@ -13,6 +13,11 @@
             <stringProp name="Argument.value">aaa</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="Message" elementType="Argument">
+            <stringProp name="Argument.name">Message</stringProp>
+            <stringProp name="Argument.value">fail</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
@@ -78,6 +83,21 @@ log.info(vars.get(&quot;Username&quot;));</stringProp>
           <stringProp name="BeanShellSampler.parameters"></stringProp>
           <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
         </BeanShellSampler>
+        <hashTree/>
+        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <boolProp name="resetInterpreter">false</boolProp>
+          <stringProp name="script">log.info(prev.getResponseCode());
+log.info(prev.getResponseMessage());
+
+String message = prev.getResponseMessage();
+if(message == &quot;OK&quot;) 
+{
+	log.info(&quot;pass&quot;);
+}
+</stringProp>
+        </BeanShellPostProcessor>
         <hashTree/>
       </hashTree>
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
