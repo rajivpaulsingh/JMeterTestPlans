@@ -72,7 +72,8 @@
         <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
           <stringProp name="BeanShellSampler.query">//Assigning dynamic values to variables
 int threadNum = ctx.getThreadNum();
-vars.put(&quot;Username&quot;, &quot;aaa&quot; + threadNum);</stringProp>
+vars.put(&quot;Username&quot;, &quot;aaa&quot; + threadNum);
+log.info(vars.get(&quot;Username&quot;));</stringProp>
           <stringProp name="BeanShellSampler.filename"></stringProp>
           <stringProp name="BeanShellSampler.parameters"></stringProp>
           <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
